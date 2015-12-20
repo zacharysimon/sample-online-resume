@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  get '/' => 'resumes#index'
+  get '/resumes/:id' => 'resumes#show'
+  post '/resumes' => 'resumes#create'
+  get '/resumes/new' => 'resumes#new'
+  get '/resumes/:id/edit' => 'resumes#edit'
+  patch '/resumes/:id' => 'resumes#update'
+  delete '/resumes/:id' => 'resumes#destroy'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
